@@ -8,6 +8,17 @@
 <meta property="og:title" content="Bright Start Ghana Initiative">
 <meta property="og:description" content="Early education, nutrition, and hope for the youngest children of Gomoa Fetteh, Ghana.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://brightstartghana.github.io/">
+<meta property="og:image" content="https://brightstartghana.github.io/photos/fullclass.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bright Start Ghana Initiative">
+<meta name="twitter:description" content="Early education, nutrition, and hope for the youngest children of Gomoa Fetteh, Ghana.">
+<meta name="twitter:image" content="https://brightstartghana.github.io/photos/fullclass.jpeg">
+<link rel="canonical" href="https://brightstartghana.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230C5A3E'/%3E%3Cpath d='M32 12l5.9 12 13.1 1.9-9.5 9.3 2.2 13.1L32 42.1l-11.7 6.2 2.2-13.1-9.5-9.3 13.1-1.9z' fill='%23F2B705'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Bright Start Ghana Initiative","url":"https://brightstartghana.github.io/","email":"brightstartghanainitiative@gmail.com","founder":{"@type":"Person","name":"George Armah"},"areaServed":"Gomoa Fetteh, Central Region, Ghana","description":"Early education, nutrition, and learning materials for pre-kindergarten children in Gomoa Fetteh, Ghana."}
+</script>
 <meta name="theme-color" content="#0C5A3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +85,7 @@
   .menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--green);cursor:pointer}
 
   /* Hero */
-  .hero{position:relative;color:#fff;overflow:hidden;background:#05281C}
+  .hero{position:relative;color:#fff;overflow:hidden;background:#05281C;padding:0}
   .hero-media{position:absolute;top:0;bottom:0;right:0;left:50%}
   .hero-media img{width:100%;height:100%;object-fit:cover}
   .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05281C 0%,rgba(5,40,28,0) 12%)}
@@ -219,11 +230,38 @@
     .phase{padding:30px}
     section{padding:64px 0}
   }
+  /* Accessibility & utilities */
+  .skip-link{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--gold);color:var(--ink);font-weight:700;padding:.7rem 1rem;border-radius:8px}
+  .skip-link:focus{left:8px}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+  .mt-s{margin-top:.5rem}
+  .mt-m{margin-top:28px}
+  .small-note{font-size:.9rem;color:var(--ink-soft);margin-top:1rem}
+  .footer-about{color:rgba(255,255,255,.7)}
+  .section-tight{padding-top:64px;padding-bottom:64px}
+  .text-center{text-align:center}
+  .ba-head h3{margin:0;font-size:1.2rem}
+  .hero .eyebrow,.phase .eyebrow{color:var(--gold)}
+  .signoff{font-weight:600;color:var(--green);margin-bottom:0}
+  .phase-note{font-size:.9rem;margin-top:1.4rem;margin-bottom:0;color:rgba(255,255,255,.72)}
+  .lede.spaced{margin-bottom:30px}
+  .give-primary{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;border:2px solid var(--green);background:var(--white)}
+  .give-primary h3{font-size:1.35rem}
+  .give-primary .btn{padding:.8rem 1.5rem}
+  .amounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:26px}
+  .amount{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .amount b{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.6rem;color:var(--green);line-height:1.1}
+  .amount span{font-size:.93rem;color:var(--ink-soft)}
+  .others-label{margin:34px 0 0;font-weight:600;color:var(--ink)}
+  .give-grid.others{margin-top:14px}
+  .pf-links{margin-top:10px;font-size:.84rem}
+  .pf-links a{color:rgba(255,255,255,.78);text-decoration:underline}
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
 </style>
 </head>
 <body>
-<div class="kente-band"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="kente-band" id="top"></div>
 
 <header class="nav">
   <div class="wrap nav-inner">
@@ -237,20 +275,19 @@
       <a href="#faq">FAQ</a>
       <a href="#give" class="btn btn-red">Donate</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-controls="menu" aria-expanded="false"><span aria-hidden="true">☰</span></button>
   </div>
 </header>
 <main id="main">
 
-<a id="top"></a>
 <!-- HERO -->
-<section class="hero" style="padding:0">
+<section class="hero">
   <div class="hero-media">
-    <img src="photos/fullclass.jpeg" alt="Children of Gomoa Fetteh at their new learning tables">
+    <img src="photos/fullclass.jpeg" alt="Children of Gomoa Fetteh at their new learning tables" width="1280" height="960" fetchpriority="high">
   </div>
   <div class="wrap">
     <div class="hero-inner">
-      <p class="eyebrow" style="color:var(--gold)">Gomoa Fetteh · Central Region, Ghana</p>
+      <p class="eyebrow">Gomoa Fetteh · Central Region, Ghana</p>
       <h1>Every child deserves a <em>bright start</em>.</h1>
       <p>We bring early education, daily meals, and learning materials to the youngest children of Gomoa Fetteh. The program launched in March 2026 — and now we're expanding to reach all 50.</p>
       <div class="hero-cta">
@@ -273,90 +310,90 @@
       <div class="cell"><b>30</b><span>Children served since March 2026</span></div>
       <div class="cell"><b>100+</b><span>Books &amp; learning materials</span></div>
       <div class="cell"><b>3 mo.</b><span>Daily meals funded</span></div>
-      <div class="cell"><b>100%</b><span>Goes directly to the children</span></div>
+      <div class="cell"><b>124%</b><span>Of our Phase 1 goal raised</span></div>
     </div>
   </div>
 </section>
 
 <!-- THE NEED / APPROACH -->
-<section id="story">
+<section aria-labelledby="story-title" id="story">
   <div class="wrap split">
     <div>
       <p class="eyebrow">Why this matters</p>
-      <h2>A classroom full of potential — and almost no resources.</h2>
+      <h2 id="story-title">A classroom full of potential — and almost no resources.</h2>
       <p class="lede">In Gomoa Fetteh, pre-kindergarten children attend class without books, proper materials, or consistent meals. Their teacher does remarkable work with very little. We're changing that — not by starting something new, but by strengthening what the community already built.</p>
     </div>
     <div class="stack-cards">
       <div class="mini"><h3>The need</h3><p>Children learning without books, supplies, or dependable nutrition — and families struggling to fill the gap.</p></div>
       <div class="mini"><h3>Our approach</h3><p>Learning materials, a daily feeding program, teacher support, and parent engagement — a whole-child foundation.</p></div>
-      <div class="mini"><h3>The impact</h3><p>Every child has what they need to learn. Meals remove the hunger barrier. The groundwork lasts well beyond the first term.</p></div>
+      <div class="mini"><h3>The impact</h3><p>Every child has what they need to learn, and daily meals mean no one learns hungry. Books, furniture, and teacher training stay with the classroom after each term.</p></div>
     </div>
   </div>
 </section>
 
 <!-- WHY GOMOA FETTEH -->
-<section class="tint">
+<section aria-labelledby="community-title" class="tint">
   <div class="wrap split">
     <div>
       <div class="photo-frame">
-        <img src="photos/head-teacher.jpeg" alt="The school's head teacher in the Gomoa Fetteh classroom on launch day">
+        <img src="photos/head-teacher.jpeg" alt="The school's head teacher in the Gomoa Fetteh classroom on launch day" width="1288" height="952" loading="lazy" decoding="async">
       </div>
-      <p class="founder-cap">The school's head teacher in the classroom on launch day, March 4, 2026.</p>
+      <p class="founder-cap">The school's head teacher in the classroom on launch day, <time datetime="2026-03-04">March 4, 2026</time>.</p>
     </div>
     <div>
       <p class="eyebrow">Why Gomoa Fetteh, why now</p>
-      <h2>This is my community.</h2>
+      <h2 id="community-title">This is my community.</h2>
       <p>Gomoa Fetteh is my family's hometown. I've seen firsthand the challenges these children face — and the resilience of the people around them. This isn't a distant charity project; it's about lifting up my own community's youngest generation.</p>
       <p>The local church has taught children here for years with almost nothing — they have the infrastructure, the commitment, and the trust of families. Pre-kindergarten is when the foundation for all future learning is set. Investing now means these children enter primary school ready to succeed.</p>
-      <p style="font-weight:600;color:var(--green);margin-bottom:0">— George Armah, Founder &amp; Director</p>
+      <p class="signoff">— George Armah, Founder &amp; Director</p>
     </div>
   </div>
 </section>
 
 <!-- LAUNCH / BEFORE-AFTER -->
-<section id="launch">
+<section aria-labelledby="launch-title" id="launch">
   <div class="wrap">
-    <p class="eyebrow">Launch day · March 4, 2026</p>
-    <h2>See the transformation your support created.</h2>
+    <p class="eyebrow">Launch day · <time datetime="2026-03-04">March 4, 2026</time></p>
+    <h2 id="launch-title">See the transformation your support created.</h2>
     <p class="lede">Thanks to the Blacksburg United Methodist Church Youth Group and our donors, the program went live — 30 children, new materials, colorful tables, and daily meals.</p>
 
-    <div class="ba-head"><span class="tag tag-before">Before</span><h3 style="margin:0;font-size:1.2rem">The classroom we started with</h3></div>
+    <div class="ba-head"><span class="tag tag-before">Before</span><h3>The classroom we started with</h3></div>
     <div class="gallery">
-      <div class="gcard"><img src="photos/before1.jpeg" alt="Worn wooden tables and chairs in a bare classroom"><p>Old wooden tables, sparse classroom, minimal materials</p></div>
-      <div class="gcard"><img src="photos/before2.jpeg" alt="Empty classroom with a few old tables and little on the walls"><p>Children with no proper seating, bare walls</p></div>
+      <div class="gcard"><img src="photos/before1.jpeg" alt="Worn wooden tables and chairs in a bare classroom" width="1280" height="960" loading="lazy" decoding="async"><p>Old wooden tables, sparse classroom, minimal materials</p></div>
+      <div class="gcard"><img src="photos/before2.jpeg" alt="Empty classroom with a few old tables and little on the walls" width="960" height="1280" loading="lazy" decoding="async"><p>Limited, worn seating and sparse classroom materials</p></div>
     </div>
 
-    <div class="ba-head"><span class="tag tag-after">After</span><h3 style="margin:0;font-size:1.2rem">The same room, transformed</h3></div>
+    <div class="ba-head"><span class="tag tag-after">After</span><h3>The same room, transformed</h3></div>
     <div class="gallery">
-      <div class="gcard"><img src="photos/before3.jpeg" alt="Volunteers arranging bright yellow and red chairs around new tables"><p>Setting up the new tables and chairs</p></div>
-      <div class="gcard"><img src="photos/materials.jpeg" alt="Stacks of new workbooks, pencils and supplies on a table"><p>New books and supplies, organized and ready</p></div>
-      <div class="gcard"><img src="photos/distribtion.jpeg" alt="Volunteers handing a pack of materials to a young child"><p>Distribution day — children in Bright Start t-shirts</p></div>
-      <div class="gcard"><img src="photos/classroom.jpeg" alt="Teacher hanging charts while children sit at pink, green and yellow tables"><p>Learning in action with the new materials</p></div>
+      <div class="gcard"><img src="photos/before3.jpeg" alt="Volunteers arranging bright yellow and red chairs around new tables" width="960" height="1280" loading="lazy" decoding="async"><p>Setting up the new tables and chairs</p></div>
+      <div class="gcard"><img src="photos/materials.jpeg" alt="Stacks of new workbooks, pencils and supplies on a table" width="1280" height="960" loading="lazy" decoding="async"><p>New books and supplies, organized and ready</p></div>
+      <div class="gcard"><img src="photos/distribution.jpeg" alt="Volunteers handing a pack of materials to a young child" width="960" height="1280" loading="lazy" decoding="async"><p>Distribution day — children in Bright Start t-shirts</p></div>
+      <div class="gcard"><img src="photos/classroom.jpeg" alt="Teacher hanging charts while children sit at pink, green and yellow tables" width="960" height="1280" loading="lazy" decoding="async"><p>Learning in action with the new materials</p></div>
     </div>
   </div>
 </section>
 
 <!-- LAUNCH VIDEO -->
-<section class="tint-green" style="padding-top:64px;padding-bottom:64px">
+<section class="tint-green section-tight" aria-labelledby="watch-title">
   <div class="wrap split">
     <div>
       <p class="eyebrow">Watch</p>
-      <h2>Launch day, in their own joy.</h2>
-      <p class="lede">See the colorful tables, the new materials, and the happy faces as 30 children began their educational journey on March 4, 2026.</p>
-      <a href="#give" class="btn btn-green" style="margin-top:.5rem">Help us reach all 50</a>
+      <h2 id="watch-title">Launch day, in their own joy.</h2>
+      <p class="lede">See the colorful tables, the new materials, and the happy faces as 30 children began their educational journey on <time datetime="2026-03-04">March 4, 2026</time>.</p>
+      <a href="#give" class="btn btn-green mt-s">Help us reach all 50</a>
     </div>
     <div class="video">
-      <iframe src="https://www.youtube.com/embed/vHKNgDTVENM" title="Bright Start Ghana launch day" loading="lazy" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/vHKNgDTVENM" title="Bright Start Ghana launch day" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
 <!-- PROGRAMS -->
-<section id="programs">
+<section aria-labelledby="programs-title" id="programs">
   <div class="wrap">
     <p class="eyebrow">What your gift funds</p>
-    <h2>A whole-child program.</h2>
-    <p class="lede">Four parts that work together — learning, nutrition, teaching, and family. Every dollar goes directly to the children.</p>
+    <h2 id="programs-title">A whole-child program.</h2>
+    <p class="lede">Four parts that work together — learning, nutrition, teaching, and family. Donations pay for program costs: learning materials, meals, and teacher support.</p>
     <div class="prog-grid">
       <div class="prog">
         <h3>Learning materials</h3>
@@ -383,12 +420,12 @@
 </section>
 
 <!-- PHASE 2 -->
-<section id="phase2" class="tint">
+<section aria-labelledby="phase2-title" id="phase2" class="tint">
   <div class="wrap">
     <div class="phase">
       <div class="kente-corner"></div>
-      <p class="eyebrow" style="color:var(--gold)">The next step</p>
-      <h2>Phase 2: reaching all 50 children.</h2>
+      <p class="eyebrow">The next step</p>
+      <h2 id="phase2-title">Phase 2: reaching all 50 children.</h2>
       <p>Phase 1 proved the model works. Now we're expanding from 30 to all 50 eligible children in the community — so no child is left out. Here's exactly what that takes.</p>
       <div class="budget">
         <div class="b"><b>$1,000</b><span>Learning furniture — tables &amp; chairs</span></div>
@@ -401,105 +438,116 @@
         <div class="big"><em>$3,200</em> to welcome 20 more children</div>
         <a href="#give" class="btn btn-red">Fund the expansion</a>
       </div>
-      <p style="font-size:.9rem;margin-top:1.4rem;margin-bottom:0;color:rgba(255,255,255,.72)">Combined with Phase 1, that's $6,063 to serve all 50 children — about $121 per child for a full early-learning foundation.</p>
+      <p class="phase-note">Combined with Phase 1, that's $6,063 to serve all 50 children — about $121 per child for a full early-learning foundation.</p>
     </div>
   </div>
 </section>
 
 <!-- COMMUNITY GALLERY -->
-<section>
+<section aria-labelledby="meet-title">
   <div class="wrap">
     <p class="eyebrow">The community</p>
-    <h2>Meet Gomoa Fetteh.</h2>
-    <p class="lede" style="margin-bottom:30px">The children, the classroom, and the village your support reaches.</p>
+    <h2 id="meet-title">Meet Gomoa Fetteh.</h2>
+    <p class="lede spaced">The children, the classroom, and the village your support reaches.</p>
     <div class="gallery-soft">
-      <img src="images/Nature%20of%20class.jpeg" alt="Pre-KG classroom">
-      <img src="images/Kid1_Learning.jpeg" alt="Child learning">
-      <img src="images/where%20Kids%20Sit.jpeg" alt="Where the children sit">
+      <img src="images/nature-of-class.jpeg" alt="Pre-KG classroom" width="765" height="1020" loading="lazy" decoding="async">
+      <img src="images/child-at-board.jpeg" alt="Child learning" width="765" height="1020" loading="lazy" decoding="async">
+      <img src="images/where-kids-sit.jpeg" alt="Where the children sit" width="765" height="1020" loading="lazy" decoding="async">
     </div>
-    <div class="video" style="margin-top:30px">
-      <iframe src="https://www.youtube.com/embed/VBXQOKnInWk" title="Meet the children of Gomoa Fetteh" loading="lazy" allowfullscreen></iframe>
+    <div class="video mt-m">
+      <iframe src="https://www.youtube-nocookie.com/embed/VBXQOKnInWk" title="Meet the children of Gomoa Fetteh" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
 <!-- LIFE IN GOMOA FETTEH -->
-<section class="tint">
+<section aria-labelledby="life-title" class="tint">
   <div class="wrap">
     <p class="eyebrow">Life in Gomoa Fetteh</p>
-    <h2>A fishing town on Ghana's Central Region coast.</h2>
+    <h2 id="life-title">A fishing town on the coast of Ghana's Central Region.</h2>
     <p class="lede">Most days start at the shore, where canoes come in and families sort the catch. These are the parents and grandparents of the children we serve.</p>
     <div class="shore">
-      <figure><img src="images/Community%201.jpeg" alt="Wooden fishing canoes and green nets pulled up on the sand, with people working nearby"><figcaption>Canoes and nets on the beach</figcaption></figure>
-      <figure><img src="images/Community-Fishing.jpeg" alt="Canoes along the waterline with women and men gathered at the water's edge"><figcaption>Families working at the shoreline</figcaption></figure>
-      <figure><img src="images/Gomoa%20Fetteh%20village.jpg" alt="Red dirt road lined with small block houses and power lines"><figcaption>A street in the village</figcaption></figure>
+      <figure><img src="images/beach-canoes.jpeg" alt="Wooden fishing canoes and green nets pulled up on the sand, with people working nearby" width="1000" height="750" loading="lazy" decoding="async"><figcaption>Canoes and nets on the beach</figcaption></figure>
+      <figure><img src="images/beach-shoreline.jpeg" alt="Canoes along the waterline with women and men gathered at the water's edge" width="1000" height="750" loading="lazy" decoding="async"><figcaption>Families working at the shoreline</figcaption></figure>
+      <figure><img src="images/village-street.jpg" alt="Red dirt road lined with small block houses and power lines" width="1000" height="666" loading="lazy" decoding="async"><figcaption>A street in the village</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- BIGGER PICTURE -->
-<section class="tint-green">
+<section aria-labelledby="building-title" class="tint-green">
   <div class="wrap split">
     <div>
       <p class="eyebrow">The bigger picture</p>
-      <h2>Building for the decades ahead.</h2>
+      <h2 id="building-title">Building for the decades ahead.</h2>
       <p>While we focus on the 50 children learning today, the community is constructing permanent classrooms — a major, locally driven investment that will serve hundreds of children for years to come.</p>
       <p>But children can't wait for construction to finish. Today's pre-KG students will be in primary school before the new building opens. Both paths matter: the community builds for the future, and Bright Start provides what children need right now.</p>
     </div>
     <div class="duo">
-      <img src="images/School%20Building%201.jpeg" alt="Permanent classrooms under construction, front view">
-      <img src="images/SchoolBlocks.jpeg" alt="Permanent classrooms under construction, side view">
+      <img src="images/school-building-1.jpeg" alt="Permanent classrooms under construction, front view" width="1280" height="960" loading="lazy" decoding="async">
+      <img src="images/school-building-2.jpeg" alt="Permanent classrooms under construction, side view" width="1280" height="960" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
 
 <!-- GIVE -->
-<section id="give">
+<section aria-labelledby="give-title" id="give">
   <div class="wrap">
     <p class="eyebrow">Ways to give</p>
-    <h2>Every gift reaches a child.</h2>
-    <p class="lede">Choose whatever's easiest for you. After donating, please email us so we can send a receipt and add you to our updates.</p>
+    <h2 id="give-title">Every gift reaches a child.</h2>
+    <p class="lede">Here's what your gift covers in Phase 2, based on our $3,200 budget for 20 new children.</p>
+    <div class="amounts">
+      <div class="amount"><b>$20</b><span>Learning materials for one child</span></div>
+      <div class="amount"><b>$60</b><span>Three months of daily meals for one child</span></div>
+      <div class="amount"><b>$160</b><span>Brings one new child into the program</span></div>
+      <div class="amount"><b>$1,200</b><span>Feeds all 20 new children for three months</span></div>
+    </div>
     <div class="give-grid">
-      <div class="give">
-        <h3>PayPal</h3>
-        <div class="row">Quick and secure online.</div>
-        <div class="row" style="margin-top:.6rem"><a class="btn btn-green" style="padding:.5rem 1.1rem;font-size:.9rem" href="https://paypal.me/brightstartghana" target="_blank" rel="noopener">paypal.me/brightstartghana</a></div>
+      <div class="give give-primary">
+        <div>
+          <h3>Donate securely with PayPal</h3>
+          <div class="row">The quickest way to give, by card or PayPal balance. Add "Bright Start" in the note.</div>
+        </div>
+        <a class="btn btn-red" href="https://paypal.me/brightstartghana" target="_blank" rel="noopener">Donate with PayPal</a>
       </div>
+    </div>
+    <p class="others-label">Other ways to give</p>
+    <div class="give-grid others">
       <div class="give">
         <h3>Zelle</h3>
         <div class="row">Fast bank-to-bank transfer.</div>
-        <div class="row" style="margin-top:.6rem">Phone: <code>+1 (540) 824-9381</code></div>
+        <div class="row">Phone: <code>+1 (540) 824-9381</code></div>
       </div>
       <div class="give">
         <h3>Mobile Money (Ghana)</h3>
         <div class="row">MTN · for donors in Ghana</div>
-        <div class="row" style="margin-top:.6rem">MTN: <code>+233 55 322 1699</code></div>
+        <div class="row">MTN: <code>+233 55 322 1699</code></div>
         <div class="row">Name: Christiana Esi Armah</div>
       </div>
       <div class="give">
         <h3>Bank transfer (US)</h3>
         <div class="row">Direct transfer for US donors.</div>
-        <div class="row" style="margin-top:.6rem">US bank details available on request — just email us.</div>
+        <div class="row">US bank details available on request — just email us.</div>
       </div>
       <div class="give">
         <h3>Check by mail</h3>
         <div class="row">Payable to: Bright Start Ghana Initiative</div>
-        <div class="row" style="margin-top:.6rem">George Armah<br>401 Fairfax Rd, Apt 222<br>Blacksburg, VA 24060</div>
+        <div class="row">George Armah<br>401 Fairfax Rd, Apt 222<br>Blacksburg, VA 24060</div>
       </div>
       <div class="give">
         <h3>After you give</h3>
-        <div class="row">Email <a href="mailto:brightstartghanainitiative@gmail.com">brightstartghanainitiative@gmail.com</a> with your confirmation for a receipt, a thank-you, and program updates.</div>
+        <div class="row">Email <a href="mailto:brightstartghanainitiative@gmail.com">brightstartghanainitiative@gmail.com</a> with your confirmation. We'll reply with an acknowledgment of your gift and add you to program updates.</div>
       </div>
     </div>
-    <div class="note"><strong>A note on transparency:</strong> We are working toward 501(c)(3) status, so donations are not yet tax-deductible — but we provide a receipt for your records, and every dollar goes directly to the children of Gomoa Fetteh.</div>
+    <div class="note"><strong>A note on transparency:</strong> Bright Start Ghana Initiative is not currently recognized as a 501(c)(3) tax-exempt organization, so donations are not tax-deductible at this time. Gifts are received and managed by founder George Armah and used for program costs in Gomoa Fetteh. We send an acknowledgment of every gift for your records.</div>
   </div>
 </section>
 
 <!-- PARTNER -->
-<section class="tint" id="partner">
+<section aria-labelledby="partner-title" class="tint" id="partner">
   <div class="wrap">
     <p class="eyebrow">For churches &amp; organizations</p>
-    <h2>Partner with us.</h2>
+    <h2 id="partner-title">Partner with us.</h2>
     <p class="lede">Meaningful ways for congregations, companies, schools, and NGOs to get involved.</p>
     <div class="plist">
       <div class="pitem"><div class="n">1</div><div><h3>Adopt a classroom</h3><p>Fully fund a phase and receive naming recognition and regular video updates from the classroom.</p></div></div>
@@ -509,7 +557,7 @@
       <div class="pitem"><div class="n">5</div><div><h3>Schools &amp; universities</h3><p>Service-learning projects, teacher-training partnerships, and research collaboration.</p></div></div>
       <div class="pitem"><div class="n">6</div><div><h3>Share our story</h3><p>Introduce us to someone who'd care. A single connection can change everything.</p></div></div>
     </div>
-    <p style="margin-top:28px"><a class="btn btn-ghost-dark" href="mailto:brightstartghanainitiative@gmail.com?subject=Partnership%20with%20Bright%20Start%20Ghana">Request partnership materials</a></p>
+    <p class="mt-m"><a class="btn btn-ghost-dark" href="mailto:brightstartghanainitiative@gmail.com?subject=Partnership%20with%20Bright%20Start%20Ghana">Request partnership materials</a></p>
   </div>
 </section>
 
@@ -522,33 +570,33 @@
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" aria-labelledby="faq-title">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center">Transparency</p>
-    <h2 style="text-align:center">Questions, answered.</h2>
+    <p class="eyebrow text-center">Transparency</p>
+    <h2 class="text-center" id="faq-title">Questions, answered.</h2>
     <div class="faq">
-      <details open><summary>How will my donation be used?</summary><p>Every dollar goes directly to the children — learning materials, the feeding program, teacher support, and parent engagement. We document purchases with photos and share them with donors.</p></details>
-      <details><summary>Is my donation tax-deductible?</summary><p>We're working toward 501(c)(3) status. For now, donations are not yet tax-deductible, but we provide receipts for your records, and we expect tax-exempt status in the near future.</p></details>
+      <details open><summary>How will my donation be used?</summary><p>Donations pay for program costs: learning materials, the feeding program, teacher support, and parent engagement. We document purchases with photos and share them with donors.</p></details>
+      <details><summary>Is my donation tax-deductible?</summary><p>No. Bright Start Ghana Initiative is not currently recognized as a 501(c)(3) tax-exempt organization, so donations are not tax-deductible at this time. We send an acknowledgment of every gift for your records.</p></details>
       <details><summary>How do I know the money reaches the children?</summary><p>Accountability is our priority. George Armah (founder) has direct contacts in Gomoa Fetteh through family and church networks. Donors receive photos of materials delivered, teacher progress reports, local church oversight, and regular updates.</p></details>
       <details><summary>What happens after the program term?</summary><p>This is a sustainable launch, not a one-time handout. Materials last for years, teacher training is permanent, and parent workshops shift mindsets. The community takes ownership — the goal is to empower, not create dependency.</p></details>
       <details><summary>Can I sponsor a specific child?</summary><p>We currently support the whole classroom as a group so no child is left out. Larger donors ($500+) can be matched with specific classroom needs and receive detailed updates.</p></details>
-      <details><summary>Will I receive updates?</summary><p>Yes — a thank-you and receipt right away, monthly progress updates with photos, and a final impact report after the program term.</p></details>
+      <details><summary>Will I receive updates?</summary><p>Yes — a thank-you and acknowledgment right away, monthly progress updates with photos, and a final impact report after the program term.</p></details>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="tint-green" id="contact">
+<section aria-labelledby="contact-title" class="tint-green" id="contact">
   <div class="wrap contact-grid">
     <div>
       <p class="eyebrow">Get in touch</p>
-      <h2>We'd love to hear from you.</h2>
+      <h2 id="contact-title">We'd love to hear from you.</h2>
       <p class="cline"><b>Founder:</b> George Armah</p>
       <p class="cline"><b>Email:</b> <a href="mailto:brightstartghanainitiative@gmail.com">brightstartghanainitiative@gmail.com</a></p>
       <p class="cline"><b>Phone:</b> +1 (540) 824-9381</p>
       <p class="cline"><b>Ghana:</b> Gomoa Fetteh, Central Region</p>
       <p class="cline"><b>US base:</b> Blacksburg, Virginia</p>
-      <p style="margin-top:1.4rem"><a class="btn btn-green" href="mailto:brightstartghanainitiative@gmail.com">Send a message</a></p>
+      <p class="mt-m"><a class="btn btn-green" href="mailto:brightstartghanainitiative@gmail.com">Send a message</a></p>
     </div>
     <div>
       <p class="eyebrow">We welcome</p>
@@ -559,7 +607,7 @@
         <div class="mini"><p>Media &amp; interview requests</p></div>
         <div class="mini"><p>Visit coordination in Ghana</p></div>
       </div>
-      <p style="font-size:.9rem;color:var(--ink-soft);margin-top:1rem">We typically respond within 24 hours.</p>
+      <p class="small-note">We typically respond within 24 hours.</p>
     </div>
   </div>
 </section>
@@ -571,7 +619,7 @@
     <div class="fgrid">
       <div>
         <h3>Bright Start Ghana</h3>
-        <p style="color:rgba(255,255,255,.7)">Early education, nutrition, and community support for the youngest children of Gomoa Fetteh, Ghana.</p>
+        <p class="footer-about">Early education, nutrition, and community support for the youngest children of Gomoa Fetteh, Ghana.</p>
       </div>
       <div>
         <h3>Explore</h3>
@@ -593,7 +641,7 @@
       </div>
     </div>
     <div class="fbar">
-      © <span id="yr"></span> Bright Start Ghana Initiative · Founded by George Armah. Every dollar goes directly to the children of Gomoa Fetteh. We are working toward 501(c)(3) status; donations are not yet tax-deductible.
+      © <span id="yr"></span> Bright Start Ghana Initiative · Founded by George Armah. Not currently a 501(c)(3) tax-exempt organization; donations are not tax-deductible at this time.
     </div>
   </div>
 </footer>
@@ -601,8 +649,15 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   var mb=document.getElementById('menuBtn'), menu=document.getElementById('menu');
-  mb.addEventListener('click',function(){menu.classList.toggle('open')});
-  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+  function setMenu(open){
+    menu.classList.toggle('open',open);
+    mb.setAttribute('aria-expanded',open);
+    mb.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+  }
+  mb.addEventListener('click',function(e){e.stopPropagation();setMenu(!menu.classList.contains('open'))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);mb.focus()}});
+  document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&e.target!==mb){setMenu(false)}});
 </script>
 </body>
 </html>
