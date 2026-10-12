@@ -23,7 +23,8 @@
     --paper:#FBF7EF;
     --sand:#F2E9D7;
     --ink:#1C1813;
-    --ink-soft:#5B5349;
+    --ink-soft:#463F36;
+    --gold-text:#8C5E00;
     --line:#E3D9C6;
     --white:#ffffff;
     --maxw:1180px;
@@ -47,7 +48,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   .kente-band{height:7px;background:var(--kente);background-size:60px 100%}
   section{padding:88px 0}
-  .eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 .6rem}
+  .eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text);margin:0 0 .6rem}
   .lede{font-size:1.18rem;color:var(--ink-soft);max-width:60ch}
 
   /* Buttons */
@@ -75,7 +76,8 @@
   .hero-media{position:absolute;inset:0}
   .hero-media img{width:100%;height:100%;object-fit:cover}
   .hero-media::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(105deg, rgba(7,61,42,.94) 0%, rgba(7,61,42,.82) 42%, rgba(12,90,62,.42) 100%)}
+    background:linear-gradient(90deg, rgba(5,40,28,.93) 0%, rgba(5,40,28,.84) 38%, rgba(5,40,28,.35) 68%, rgba(5,40,28,.05) 100%)}
+  .hero-inner{text-shadow:0 1px 2px rgba(0,0,0,.25)}
   .hero-inner{position:relative;padding:110px 0 96px;max-width:680px}
   .hero h1{color:#fff;font-size:clamp(2.6rem,6vw,4.6rem);font-weight:600}
   .hero h1 em{font-style:italic;color:var(--gold)}
@@ -112,7 +114,7 @@
   .ba-head .tag{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .7rem;border-radius:999px}
   .tag-before{background:#efe3d0;color:#8a6d2f}
   .tag-after{background:var(--green);color:#fff}
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
   .gcard{border-radius:14px;overflow:hidden;background:var(--white);border:1px solid var(--line)}
   .gcard img{aspect-ratio:4/3;object-fit:cover;width:100%}
   .gcard p{font-size:.88rem;color:var(--ink-soft);margin:0;padding:12px 14px}
@@ -189,7 +191,18 @@
   footer .links{display:flex;flex-direction:column;gap:.4rem}
   .fbar{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.84rem;color:rgba(255,255,255,.55)}
 
+  /* Community strip */
+  .shore{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+  .shore figure{margin:0;border-radius:14px;overflow:hidden;background:var(--white);border:1px solid var(--line)}
+  .shore img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .shore figcaption{font-size:.88rem;color:var(--ink-soft);padding:10px 14px}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .duo img{border-radius:14px;border:1px solid var(--line);aspect-ratio:4/3;object-fit:cover;width:100%}
+  .founder-cap{font-size:.88rem;color:var(--ink-soft);margin-top:10px}
+
   @media(max-width:860px){
+    .hero-media::after{background:rgba(5,40,28,.8)}
+    .shore{grid-template-columns:1fr}
     .nav-links{position:fixed;inset:68px 0 auto 0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:0;padding:12px 24px 20px;border-bottom:1px solid var(--line);display:none}
     .nav-links.open{display:flex}
     .nav-links a{padding:12px 0;width:100%;border-bottom:1px solid var(--line)}
@@ -279,8 +292,11 @@
 <!-- WHY GOMOA FETTEH -->
 <section class="tint">
   <div class="wrap split">
-    <div class="photo-frame">
-      <img src="images/Community%201.jpeg" alt="The Gomoa Fetteh community">
+    <div>
+      <div class="photo-frame">
+        <img src="photos/founder.jpeg" alt="George Armah in the Gomoa Fetteh classroom on launch day">
+      </div>
+      <p class="founder-cap">George Armah in the classroom on launch day, March 4, 2026.</p>
     </div>
     <div>
       <p class="eyebrow">Why Gomoa Fetteh, why now</p>
@@ -303,11 +319,11 @@
     <div class="gallery">
       <div class="gcard"><img src="photos/before1.jpeg" alt="Old classroom"><p>Old wooden tables, sparse classroom, minimal materials</p></div>
       <div class="gcard"><img src="photos/before2.jpeg" alt="Classroom before"><p>Children with no proper seating, bare walls</p></div>
-      <div class="gcard"><img src="photos/before3.jpeg" alt="Before setup"><p>A basic setup with very few resources</p></div>
     </div>
 
     <div class="ba-head"><span class="tag tag-after">After</span><h3 style="margin:0;font-size:1.2rem">The same room, transformed</h3></div>
     <div class="gallery">
+      <div class="gcard"><img src="photos/before3.jpeg" alt="Setting up the new tables and chairs"><p>Setting up the new tables and chairs</p></div>
       <div class="gcard"><img src="photos/materials.jpeg" alt="New materials"><p>New books and supplies, organized and ready</p></div>
       <div class="gcard"><img src="photos/distribtion.jpeg" alt="Distribution day"><p>Distribution day — children in Bright Start t-shirts</p></div>
       <div class="gcard"><img src="photos/classroom.jpeg" alt="Learning in action"><p>Learning in action with the new materials</p></div>
@@ -395,10 +411,23 @@
       <img src="images/Nature%20of%20class.jpeg" alt="Pre-KG classroom">
       <img src="images/Kid1_Learning.jpeg" alt="Child learning">
       <img src="images/where%20Kids%20Sit.jpeg" alt="Where the children sit">
-      <img src="images/Gomoa%20Fetteh%20village.jpg" alt="Gomoa Fetteh village">
     </div>
     <div class="video" style="margin-top:30px">
       <iframe src="https://www.youtube.com/embed/VBXQOKnInWk" title="Meet the children of Gomoa Fetteh" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE IN GOMOA FETTEH -->
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">Life in Gomoa Fetteh</p>
+    <h2>A fishing town on Ghana's Central Region coast.</h2>
+    <p class="lede">Most days start at the shore, where canoes come in and families sort the catch. These are the parents and grandparents of the children we serve.</p>
+    <div class="shore">
+      <figure><img src="images/Community%201.jpeg" alt="Canoes and nets on the beach at Gomoa Fetteh"><figcaption>Canoes and nets on the beach</figcaption></figure>
+      <figure><img src="images/Community-Fishing.jpeg" alt="Families working at the shoreline"><figcaption>Families working at the shoreline</figcaption></figure>
+      <figure><img src="images/Gomoa%20Fetteh%20village.jpg" alt="A street in Gomoa Fetteh village"><figcaption>A street in the village</figcaption></figure>
     </div>
   </div>
 </section>
@@ -412,8 +441,9 @@
       <p>While we focus on the 50 children learning today, the community is constructing permanent classrooms — a major, locally driven investment that will serve hundreds of children for years to come.</p>
       <p>But children can't wait for construction to finish. Today's pre-KG students will be in primary school before the new building opens. Both paths matter: the community builds for the future, and Bright Start provides what children need right now.</p>
     </div>
-    <div class="photo-frame">
-      <img src="images/School%20Building%201.jpeg" alt="Permanent classrooms under construction">
+    <div class="duo">
+      <img src="images/School%20Building%201.jpeg" alt="Permanent classrooms under construction, front view">
+      <img src="images/SchoolBlocks.jpeg" alt="Permanent classrooms under construction, side view">
     </div>
   </div>
 </section>
