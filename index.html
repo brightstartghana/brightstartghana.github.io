@@ -215,6 +215,16 @@
   .footer-about{color:rgba(255,255,255,.7)}
   .fbar{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.84rem;color:rgba(255,255,255,.6)}
 
+  /* Team */
+  .team{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:48px;align-items:start}
+  .team-photo{margin:0}
+  .team-photo img{border-radius:18px;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:0 30px 60px -40px rgba(28,24,19,.55)}
+  .people{list-style:none;display:grid;gap:14px;margin-top:22px}
+  .people li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+  .people h3{margin:0 0 .15rem;font-size:1.15rem;color:var(--green)}
+  .people .role{font-weight:600;font-size:.92rem;color:var(--gold-text);margin:0 0 .35rem}
+  .people p{margin:0;font-size:.95rem;color:var(--ink-soft)}
+  @media(max-width:860px){.team{grid-template-columns:1fr;gap:28px}.team-photo{max-width:340px}}
   @media(max-width:980px){
     .give-grid,.plist{grid-template-columns:repeat(2,1fr)}
   }
@@ -248,6 +258,7 @@
     <a class="brand" href="#top"><span class="star" aria-hidden="true">★</span> Bright Start Ghana</a>
     <nav class="nav-links" id="menu" aria-label="Main">
       <a href="#about">About</a>
+      <a href="#team">Team</a>
       <a href="#phase1">Phase 1</a>
       <a href="#phase2">Phase 2</a>
       <a href="#community">Community</a>
@@ -305,6 +316,26 @@
       <p>Gomoa Fetteh, my family's hometown, is a fishing community on the coast of Ghana's Central Region. Its pre-kindergarten class met in a room with worn tables, few books, and no meal program.</p>
       <p>The local church has taught children here for years with very little. Bright Start doesn't replace that work; it strengthens it with learning materials, daily meals, and support for the teacher.</p>
       <p class="signoff">— George Armah, Founder &amp; Director</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="tint-green" id="team" aria-labelledby="team-title">
+  <div class="wrap team">
+    <figure class="team-photo">
+      <img src="photos/nana-ekua-aborba.jpg" alt="Nana Ekua Aborba II in traditional cloth and beads, smiling under a tree" width="720" height="960" loading="lazy" decoding="async">
+      <figcaption class="caption">Nana Ekua Aborba II, Akwamuhemmaa of Gomoa Fetteh</figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow">Our team</p>
+      <h2 id="team-title">The people behind Bright Start.</h2>
+      <p>Bright Start is led from both sides of the Atlantic: in Gomoa Fetteh, where the children learn, and in Blacksburg, Virginia, where support is raised.</p>
+      <ul class="people">
+        <li><h3>Nana Ekua Aborba II</h3><p class="role">Ghana Representative</p><p>Akwamuhemmaa of Gomoa Fetteh and a member of the Queen Mothers of the Gomoa Fetteh Traditional Council. She works with the school and families on the ground.</p></li>
+        <li><h3>George Armah</h3><p class="role">Founder &amp; Director</p><p>Grew up in Gomoa Fetteh and now lives in Blacksburg, Virginia, where he leads fundraising and partnerships.</p></li>
+        <li><h3>Kathy Agosta</h3><p class="role">Co-sponsor</p><p>Supports Bright Start in Blacksburg and connects it with churches and women's groups.</p></li>
+      </ul>
     </div>
   </div>
 </section>
